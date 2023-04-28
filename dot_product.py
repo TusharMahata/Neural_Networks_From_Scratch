@@ -1,3 +1,6 @@
+import numpy as np
+
+
 inputs = [1, 2, 3, 2.7]
 
 weights = [
@@ -18,3 +21,7 @@ for neuron_weights, neuron_bias in zip(weights, bias):
     layer_output.append(neuron_output)
 
 print(layer_output)
+
+# Using numpy
+output = np.dot(weights, inputs) + bias
+print('Result Using Numpy:', output)
